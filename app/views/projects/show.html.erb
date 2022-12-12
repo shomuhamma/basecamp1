@@ -1,0 +1,17 @@
+    <div class="d-flex justify-content-center" style="margin-top:100px">
+          <div class="card" style="width:400px;padding-left:20px">
+             <p style="color: green"><%= notice %></p>
+
+              <%= render @project %>
+
+              <div>
+                <%= link_to "Edit this project", edit_project_path(@project), class: "btn btn-primary"%><br> <br>
+                <%= button_to "Destroy this project", @project, method: :delete, class: "btn btn-primary" %><br> 
+                <%= link_to "Back to projects", projects_path, class: "btn btn-primary" %><br>
+
+              
+              </div>
+        </div>
+    </div>
+
+

@@ -1,0 +1,42 @@
+        <div class="d-flex justify-content-center" style="margin-top:100px">
+          <div>
+             <%=image_tag"img.jpg"%>
+        </div>
+    </div>
+    
+    <div class="d-flex justify-content-center" style="margin-top:100px">
+          <div>
+             <h2>Forgot your password?</h2>
+        </div>
+    </div>
+
+
+
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+  <div class="d-flex justify-content-center" >
+    <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+    </div>
+  </div>  
+<div class="d-flex justify-content-center" style="margin-top:50px">
+      <div class="actions">
+          <%= f.submit "Send me reset password instructions", class: "btn btn-primary" %>
+      </div>
+</div>      
+<% end %>
+
+<div class="d-flex justify-content-center" >
+      <div class="actions">
+        <%= render "devise/shared/links" %>
+      </div>
+</div>
+
+
+
+<style>
+.form-control{
+  width:400px;
+}
+</style>
